@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.version       = Proxy::RequestForwarder::VERSION
   gem.authors       = ['Nadja Heitmann']
   gem.email         = ['nadjah@atix.de']
-  gem.homepage      = 'https://github.com/theforeman/smart_proxy_request_forwarder'
+  gem.homepage      = 'https://github.com/ATIX-AG/smart_proxy_request_forwarder'
   gem.summary       = 'Request forwarder for Foreman smart proxy'
   gem.description   = <<-EOS
     Forward reports and facts from external config management systems to Foreman
