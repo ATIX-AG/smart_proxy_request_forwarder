@@ -54,10 +54,11 @@ bundle exec bin/smart-proxy
 
 Your smart proxy should now be usable.
 
-Contributing
+# Contributing
 
 Fork and send a Pull Request. Thanks!
-Copyright
+
+# Copyright
 
 Copyright (c) 2025 ATIX AG - https://atix.de
 
