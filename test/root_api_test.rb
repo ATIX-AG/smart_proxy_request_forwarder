@@ -24,6 +24,7 @@ class RequestForwarderApiFeaturesTest < Test::Unit::TestCase
     response = JSON.parse(last_response.body)
 
     mod = response['request_forwarder']
+
     refute_nil(mod)
     assert_equal('running', mod['state'], Proxy::LogBuffer::Buffer.instance.info[:failed_modules][:request_forwarder])
   end
