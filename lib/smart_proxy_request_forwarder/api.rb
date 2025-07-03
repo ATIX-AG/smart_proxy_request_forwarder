@@ -3,7 +3,10 @@
 require 'smart_proxy_request_forwarder/proxy_request'
 
 class Proxy::RequestForwarder::Api < Sinatra::Base
+  include Sinatra::Authorization::Helpers
+
   post '/*' do
+    do_authorize_any
     case request.path
     when '/request_forwarder/hosts/facts', '/request_forwarder/config_reports'
       response = Proxy::RequestForwarder::ProxyRequest.new.foreman_request(request)

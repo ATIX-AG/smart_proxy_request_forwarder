@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   EOS
 
   gem.extra_rdoc_files = ['README.md', 'LICENSE']
-  gem.files         = Dir['lib/smart_proxy_request_forwarder', '{bundler.d,lib/smart_proxy_request_forwarder,settings.d}/**/*'] + gem.extra_rdoc_files
+  gem.files         = Dir['lib/smart_proxy_request_forwarder.rb', '{bundler.d,lib/smart_proxy_request_forwarder,settings.d}/**/*'] + gem.extra_rdoc_files
   gem.require_paths = ['lib']
   gem.license = 'GPL-3.0-only'
 

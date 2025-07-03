@@ -5,6 +5,6 @@ module Proxy::RequestForwarder
     rackup_path File.expand_path('http_config.ru', __dir__)
 
     default_settings enabled: true
-    plugin :request_forwarder, ::Proxy::VERSION
+    plugin :request_forwarder, ::Proxy::RequestForwarder::VERSION
   end
 end
