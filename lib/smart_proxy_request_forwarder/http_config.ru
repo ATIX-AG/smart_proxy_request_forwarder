@@ -2,6 +2,6 @@
 
 require 'smart_proxy_request_forwarder/api'
 
-map '/request_forwarder' do
+map '/api' do
   run Proxy::RequestForwarder::Api
 end
