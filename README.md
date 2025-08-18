@@ -5,12 +5,11 @@ configuration servers such as Puppet or Salt masters to Foreman.
 
 ## Public API
 
-### POST /request_forwarder/config_reports
+### POST /api/config_reports
 
-### POST /request_forwarder/hosts/facts
+### POST /api/hosts/facts
 
 Both API endpoints are forwarded directly to Foreman without further parameter check.
-
 
 # Installation
 

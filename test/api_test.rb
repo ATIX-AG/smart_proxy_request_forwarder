@@ -27,7 +27,7 @@ class RequestForwarderApiTest < Test::Unit::TestCase
     config_report = { host: 'host.url.test', metrics: {} }
     stub_request(:post, "#{@foreman_url}/api/config_reports").to_return(body: config_report_body, status: 200)
 
-    post 'request_forwarder/config_reports', config_report: config_report
+    post 'api/config_reports', config_report: config_report
 
     assert_predicate(last_response, :ok?)
     assert_match(config_report_body, last_response.body)
@@ -37,7 +37,7 @@ class RequestForwarderApiTest < Test::Unit::TestCase
     hosts_facts_body = '{"name": "host.test.url", "facts": {}}'
     stub_request(:post, "#{@foreman_url}/api/hosts/facts").to_return(body: hosts_facts_body, status: 200)
 
-    post 'request_forwarder/hosts/facts', { name: 'host.test.url', facts: {} }
+    post 'api/hosts/facts', { name: 'host.test.url', facts: {} }
 
     assert_predicate(last_response, :ok?)
     assert_match(hosts_facts_body, last_response.body)

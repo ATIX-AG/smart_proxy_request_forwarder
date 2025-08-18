@@ -8,7 +8,7 @@ class Proxy::RequestForwarder::Api < Sinatra::Base
   post '/*' do
     do_authorize_any
     case request.path
-    when '/request_forwarder/hosts/facts', '/request_forwarder/config_reports'
+    when '/api/hosts/facts', '/api/config_reports'
       response = Proxy::RequestForwarder::ProxyRequest.new.foreman_request(request)
       handle_response(response)
     else
