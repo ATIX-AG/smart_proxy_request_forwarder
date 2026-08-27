@@ -15,6 +15,8 @@ class RequestForwarderApiTest < Test::Unit::TestCase
   end
 
   def setup
+    header 'Host', 'localhost'
+
     @foreman_url = 'http://foreman.example.com'
     Proxy::SETTINGS.stubs(:foreman_url).returns(@foreman_url)
   end
