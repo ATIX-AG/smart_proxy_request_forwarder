@@ -20,7 +20,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.license = 'GPL-3.0-only'
 
-  gem.required_ruby_version = '>= 2.7', '< 4'
+  gem.required_ruby_version = '>= 3.0', '< 4'
 
   gem.add_dependency('rest-client', '~> 2.0')
   gem.add_dependency('sqlite3', '~> 1.0')
