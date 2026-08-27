@@ -19,6 +19,7 @@ class RequestForwarderApiFeaturesTest < Test::Unit::TestCase
   def test_features
     Proxy::DefaultModuleLoader.any_instance.expects(:load_configuration_file).with('request_forwarder.yml').returns(enabled: true)
 
+    header 'Host', 'localhost'
     get '/features'
 
     response = JSON.parse(last_response.body)
